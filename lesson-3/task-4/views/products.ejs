@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+</head>
+
+<body>
+  <h1>Products</h1>
+  <% if (products.length> 0) { %> <table border="1">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% products.forEach(product=> { %> <tr>
+            <td>
+              <%= product.name %>
+            </td>
+            <td>
+              <%= product.price %>
+            </td>
+          </tr>
+          <% }); %>
+      </tbody>
+    </table>
+    <% } else { %>
+      <p>No products</p>
+      <% } %>
+      <a href="/">Home</a>
+      <br>
+      <a href="/products/add">Add Product</a>
+      
+</body>
+
+</html>
